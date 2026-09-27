@@ -1,0 +1,80 @@
+{
+  "config": {
+    "step": {
+      "pick": {
+        "title": "Revogi Smart Sense",
+        "description": "These gateways were found on your network.",
+        "data": {
+          "device": "Gateway"
+        }
+      },
+      "manual": {
+        "title": "Revogi Smart Sense",
+        "description": "No gateway was found automatically. Enter its IP address.",
+        "data": {
+          "host": "Gateway IP address"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "The gateway did not answer. Check the IP and that it is on the same network."
+    },
+    "abort": {
+      "already_configured": "This gateway is already configured.",
+      "not_supported": "The device answered but returned no sensor data (not a Smart Sense?)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Revogi Smart Sense",
+        "data": {
+          "scan_interval": "Polling interval (seconds)",
+          "event_window": "Seconds a sensor stays on after an event"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Temperature"
+      },
+      "temperature_ext": {
+        "name": "External temperature"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "humidity_ext": {
+        "name": "External humidity"
+      },
+      "illuminance": {
+        "name": "Illuminance"
+      },
+      "noise": {
+        "name": "Noise"
+      },
+      "pressure": {
+        "name": "Pressure"
+      },
+      "air_quality": {
+        "name": "Air quality"
+      },
+      "last_event": {
+        "name": "Last event"
+      },
+      "raw": {
+        "name": "Sensor {sensor_id} (raw value)"
+      },
+      "alarm_state": {
+        "name": "Alarm mode"
+      }
+    },
+    "binary_sensor": {
+      "alarm": {
+        "name": "Alarm triggered"
+      }
+    }
+  }
+}
